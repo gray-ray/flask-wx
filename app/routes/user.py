@@ -2,30 +2,9 @@ from flask import Blueprint
 from flask import request, jsonify
 user = Blueprint('user', __name__)
 
-from app.models import db, User, Role
+from app.models import db, User
 
 
-# NOTE: 使用微信小程序账号登录不需要，其他方式新增
-# 新增
-# @user.route('/add', methods=['POST'])
-# def add():
-#     data = request.get_json()
-
-#     newUser = User(username=data['username'], email=data['email'])
-
-
-#     # 插入 roles 关联关系
-
-#     # joinRole = db.get_or_404(Role,data['roleId'] )
-
-#     # newUser.roles.append(joinRole)
-
-#     db.session.add(newUser)
-
-#     db.session.commit()
-
-
-#     return  jsonify({'message': 'User added successfully!'}), 200
 
 # 更新
 @user.route('/update', methods=['POST'])

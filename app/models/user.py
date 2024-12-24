@@ -5,8 +5,6 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from sqlalchemy import String, Integer,DateTime
 
-from .associations import user_roles
-
 from datetime import datetime, timezone
 
 class User(db.Model): 
@@ -21,19 +19,6 @@ class User(db.Model):
     avatar: Mapped[str] = mapped_column(String(200))
 
     create_time: Mapped[datetime] = mapped_column(DateTime,default= datetime.now(timezone.utc))
-
-    # 与 Role 的多对多关系
-    # roles: Mapped[list["Role"]] = relationship(
-    #     "Role",
-    #     secondary=user_roles,  # 中间表
-    #     back_populates="users"  # 反向关系
-    # )
-
-
-    # def __init__(self, nickname, email):
-    #     self.nickname = nickname
-    #     self.email = email
-
     # 输出转换
     def to_dict(self):
         return {
@@ -42,7 +27,7 @@ class User(db.Model):
             'openid': self.openid,
             'avatar': self.avatar,
             'create_time': self.create_time,
-            # 'roles': [role.to_dict() for role in self.roles] 
+         
         }
 
 
