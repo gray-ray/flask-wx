@@ -6,4 +6,6 @@ Flask_Migrate==4.0.7
 flask_sqlalchemy==3.1.1
 Requests==2.32.3
 SQLAlchemy==2.0.34
+tencentcloud_sdk_python_common==3.0.1290
+tencentcloud_sdk_python_tmt==3.0.1290
 Werkzeug==3.1.3

@@ -34,3 +34,9 @@ pipreqs ./ # 根目录
 # 进入程序目录, 执行命令 安装所有涉及到的组件
 pip install -r requirements.txt
 ```
+
+
+
+
+
+- TODO: 自定义异常处理装饰器

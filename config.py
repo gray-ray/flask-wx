@@ -7,11 +7,6 @@ class Config:
 
   SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-  WX_APPID = ''
-
-  WX_APP_SECRET = ''
-
-  JWT_SECRET_KEY = '1122'
 
 class DevelopmentConfig(Config):
   DEBUG = True
